@@ -35,7 +35,8 @@ export const AuthProvider = ({ children }) => {
         setUserName(data.name || data.email);
         return data.role;
       } else {
-        const defaultRole = email === 'admin@jjmmc.com' || email === 'admin@jjmc.com' ? 'admin' : 'student';
+        const adminEmails = ['admin@jjmmc.com', 'admin@jjmc.com', 'himubullapur@gmail.com'];
+        const defaultRole = adminEmails.includes(email) ? 'admin' : 'student';
         const userData = {
           email,
           role: defaultRole,

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Patient Registration System for JJMC Medical College",
   "private": true,
+  "homepage": "https://himanshu-b-a.github.io/Placement-dept-demo",
   "dependencies": {
     "@heroicons/react": "^2.2.0",
     "date-fns": "^3.0.6",
@@ -25,6 +26,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
   }
 }
